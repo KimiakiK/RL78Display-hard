@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "RL78Display"
-Date "2021-04-10"
-Rev "V1.0"
+Date "2021-05-07"
+Rev "V1.1"
 Comp "https://github.com/KimiakiK"
 Comment1 ""
 Comment2 ""
@@ -352,17 +352,6 @@ F 3 "~" H 1950 4850 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:+3.3V #PWR012
-U 1 1 60741CCD
-P 2150 4750
-F 0 "#PWR012" H 2150 4600 50  0001 C CNN
-F 1 "+3.3V" H 2150 4900 50  0000 C CNN
-F 2 "" H 2150 4750 50  0001 C CNN
-F 3 "" H 2150 4750 50  0001 C CNN
-	1    2150 4750
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR09
 U 1 1 6074252E
 P 1750 4850
@@ -382,7 +371,6 @@ Wire Wire Line
 	2150 4850 2150 4750
 Wire Wire Line
 	2150 4750 1750 4750
-Connection ~ 2150 4750
 Text GLabel 1800 1450 2    50   Input ~ 0
 TOOL0
 Text GLabel 1800 1550 2    50   Input ~ 0
@@ -400,17 +388,6 @@ F 1 "10k" V 3750 2700 40  0000 C CNN
 F 2 "RL78Display:1608Metric" H 3750 2700 50  0001 C CNN
 F 3 "~" H 3750 2700 50  0001 C CNN
 	1    3750 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR07
-U 1 1 60746954
-P 3750 2600
-F 0 "#PWR07" H 3750 2450 50  0001 C CNN
-F 1 "+3.3V" H 3750 2750 50  0000 C CNN
-F 2 "" H 3750 2600 50  0001 C CNN
-F 3 "" H 3750 2600 50  0001 C CNN
-	1    3750 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -431,17 +408,6 @@ F 1 "0.1uF" H 3550 3750 50  0000 R CNN
 F 2 "RL78Display:1608Metric" H 3650 3800 50  0001 C CNN
 F 3 "~" H 3650 3800 50  0001 C CNN
 	1    3650 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR010
-U 1 1 6074B06F
-P 3650 3700
-F 0 "#PWR010" H 3650 3550 50  0001 C CNN
-F 1 "+3.3V" H 3650 3850 50  0000 C CNN
-F 2 "" H 3650 3700 50  0001 C CNN
-F 3 "" H 3650 3700 50  0001 C CNN
-	1    3650 3700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -493,15 +459,15 @@ Text GLabel 4150 5500 0    50   Input ~ 0
 SW_L
 Text GLabel 4150 5400 0    50   Input ~ 0
 SW_R
-Text GLabel 9100 2950 0    50   Input ~ 0
+Text GLabel 8350 2950 0    50   Input ~ 0
 TFT_DC
-Text GLabel 9100 3050 0    50   Input ~ 0
+Text GLabel 8350 3050 0    50   Input ~ 0
 TFT_CS
-Text GLabel 9100 3150 0    50   Input ~ 0
+Text GLabel 8350 3150 0    50   Input ~ 0
 TFT_SCL
-Text GLabel 9100 3250 0    50   Input ~ 0
+Text GLabel 8350 3250 0    50   Input ~ 0
 TFT_SDA
-Text GLabel 9100 3350 0    50   Input ~ 0
+Text GLabel 8350 3350 0    50   Input ~ 0
 TFT_RESET
 $Comp
 L power:+3.3V #PWR018
@@ -559,16 +525,6 @@ Wire Wire Line
 	9200 3450 9200 3550
 Text GLabel 9000 2450 0    50   Input ~ 0
 TFT_LEDK
-Wire Wire Line
-	9100 2950 9300 2950
-Wire Wire Line
-	9300 3050 9100 3050
-Wire Wire Line
-	9100 3150 9300 3150
-Wire Wire Line
-	9300 3250 9100 3250
-Wire Wire Line
-	9100 3350 9300 3350
 $Comp
 L Device:R_Small R3
 U 1 1 607651C5
@@ -672,22 +628,11 @@ L Device:R_Small R2
 U 1 1 60798E6A
 P 9700 1500
 F 0 "R2" V 9600 1500 50  0000 C CNN
-F 1 "100" V 9700 1500 40  0001 C CNN
+F 1 "R" V 9700 1500 40  0001 C CNN
 F 2 "RL78Display:1608Metric" H 9700 1500 50  0001 C CNN
 F 3 "~" H 9700 1500 50  0001 C CNN
 	1    9700 1500
 	0    1    1    0   
-$EndComp
-$Comp
-L power:+3.3V #PWR016
-U 1 1 6079A29F
-P 9900 1400
-F 0 "#PWR016" H 9900 1250 50  0001 C CNN
-F 1 "+3.3V" H 9900 1550 50  0000 C CNN
-F 2 "" H 9900 1400 50  0001 C CNN
-F 3 "" H 9900 1400 50  0001 C CNN
-	1    9900 1400
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9900 1400 9900 1500
@@ -810,7 +755,6 @@ Wire Wire Line
 Wire Wire Line
 	4150 3700 3650 3700
 Connection ~ 4150 3700
-Connection ~ 3650 3700
 Wire Wire Line
 	4150 3600 3900 3600
 Wire Wire Line
@@ -821,4 +765,173 @@ Connection ~ 4150 3600
 Connection ~ 3650 3900
 Wire Wire Line
 	4150 3400 3200 3400
+$Comp
+L power:+5V #PWR0101
+U 1 1 6094E039
+P 3750 2600
+F 0 "#PWR0101" H 3750 2450 50  0001 C CNN
+F 1 "+5V" H 3750 2750 50  0000 C CNN
+F 2 "" H 3750 2600 50  0001 C CNN
+F 3 "" H 3750 2600 50  0001 C CNN
+	1    3750 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 609507B9
+P 3650 3700
+F 0 "#PWR0102" H 3650 3550 50  0001 C CNN
+F 1 "+5V" H 3650 3850 50  0000 C CNN
+F 2 "" H 3650 3700 50  0001 C CNN
+F 3 "" H 3650 3700 50  0001 C CNN
+	1    3650 3700
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 3700
+$Comp
+L power:+5V #PWR0103
+U 1 1 609542BE
+P 2150 4750
+F 0 "#PWR0103" H 2150 4600 50  0001 C CNN
+F 1 "+5V" H 2150 4900 50  0000 C CNN
+F 2 "" H 2150 4750 50  0001 C CNN
+F 3 "" H 2150 4750 50  0001 C CNN
+	1    2150 4750
+	1    0    0    -1  
+$EndComp
+Connection ~ 2150 4750
+$Comp
+L power:+5V #PWR0104
+U 1 1 60956797
+P 9900 1400
+F 0 "#PWR0104" H 9900 1250 50  0001 C CNN
+F 1 "+5V" H 9900 1550 50  0000 C CNN
+F 2 "" H 9900 1400 50  0001 C CNN
+F 3 "" H 9900 1400 50  0001 C CNN
+	1    9900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R8
+U 1 1 60957FFD
+P 8550 2800
+F 0 "R8" V 8560 2730 50  0000 R TNN
+F 1 "1k" V 8550 2800 40  0000 C CNN
+F 2 "RL78Display:1608Metric" H 8550 2800 50  0001 C CNN
+F 3 "~" H 8550 2800 50  0001 C CNN
+	1    8550 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 6095B48D
+P 8650 2800
+F 0 "R9" V 8660 2730 50  0000 R TNN
+F 1 "1k" V 8650 2800 40  0000 C CNN
+F 2 "RL78Display:1608Metric" H 8650 2800 50  0001 C CNN
+F 3 "~" H 8650 2800 50  0001 C CNN
+	1    8650 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 6095BBBB
+P 8750 2800
+F 0 "R10" V 8760 2730 50  0000 R TNN
+F 1 "1k" V 8750 2800 40  0000 C CNN
+F 2 "RL78Display:1608Metric" H 8750 2800 50  0001 C CNN
+F 3 "~" H 8750 2800 50  0001 C CNN
+	1    8750 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R11
+U 1 1 6095BEEC
+P 8850 2800
+F 0 "R11" V 8860 2730 50  0000 R TNN
+F 1 "1k" V 8850 2800 40  0000 C CNN
+F 2 "RL78Display:1608Metric" H 8850 2800 50  0001 C CNN
+F 3 "~" H 8850 2800 50  0001 C CNN
+	1    8850 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 6095C152
+P 8450 2800
+F 0 "R7" V 8460 2730 50  0000 R TNN
+F 1 "1k" V 8450 2800 40  0000 C CNN
+F 2 "RL78Display:1608Metric" H 8450 2800 50  0001 C CNN
+F 3 "~" H 8450 2800 50  0001 C CNN
+	1    8450 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 6095C93B
+P 8450 2550
+F 0 "#PWR0105" H 8450 2400 50  0001 C CNN
+F 1 "+3.3V" H 8450 2700 50  0000 C CNN
+F 2 "" H 8450 2550 50  0001 C CNN
+F 3 "" H 8450 2550 50  0001 C CNN
+	1    8450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 2550 8550 2550
+Connection ~ 8450 2550
+Connection ~ 8750 2550
+Wire Wire Line
+	8750 2550 8850 2550
+Connection ~ 8650 2550
+Wire Wire Line
+	8650 2550 8750 2550
+Connection ~ 8550 2550
+Wire Wire Line
+	8550 2550 8650 2550
+Wire Wire Line
+	8350 2950 8450 2950
+Wire Wire Line
+	8350 3050 8550 3050
+Wire Wire Line
+	8350 3150 8650 3150
+Wire Wire Line
+	8350 3250 8750 3250
+Wire Wire Line
+	8450 2900 8450 2950
+Connection ~ 8450 2950
+Wire Wire Line
+	8450 2950 9300 2950
+Wire Wire Line
+	8550 2900 8550 3050
+Connection ~ 8550 3050
+Wire Wire Line
+	8550 3050 9300 3050
+Wire Wire Line
+	8650 2900 8650 3150
+Connection ~ 8650 3150
+Wire Wire Line
+	8650 3150 9300 3150
+Wire Wire Line
+	8750 2900 8750 3250
+Connection ~ 8750 3250
+Wire Wire Line
+	8750 3250 9300 3250
+Wire Wire Line
+	8850 2900 8850 3350
+Connection ~ 8850 3350
+Wire Wire Line
+	8850 3350 8350 3350
+Wire Wire Line
+	8850 3350 9300 3350
+Wire Wire Line
+	8850 2550 8850 2700
+Wire Wire Line
+	8750 2550 8750 2700
+Wire Wire Line
+	8650 2550 8650 2700
+Wire Wire Line
+	8550 2550 8550 2700
+Wire Wire Line
+	8450 2550 8450 2700
 $EndSCHEMATC
