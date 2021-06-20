@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 5067)
+    (start_pass_no 2314)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -63,10 +63,12 @@
     )
   )
   (class "kicad_default"
-    XT1 XT2 +5V "LED_Status" "Net-(D1-Pad2)" "Net-(F1-Pad1)" "Net-(F1-Pad2)" TOOL0
-    NRST "POS_V" "POS_H" "SW_D" "SW_C" "SW_B" "SW_A" "TFT_RESET"
-    "TFT_SDA" "TFT_SCL" "TFT_CS" "TFT_DC" "Net-(J3-Pad3)" "TFT_LEDK" "Net-(LS1-Pad1)" "Net-(Q1-Pad1)"
-    "TFT_LED" BUZZER "SW_L" "SW_R" GND +3V3 "Net-(C7-Pad1)"
+    "Net-(U3-Pad3)" "Net-(U4-Pad3)" XT1 XT2 +5V "LED_Status" "Net-(D1-Pad2)" "Net-(F1-Pad1)"
+    "Net-(F1-Pad2)" TOOL0 NRST "POS_V" "POS_H" "SW_D" "SW_C" "SW_B"
+    "SW_A" "TFT_RESET" "TFT_SDA" "TFT_SCL" "TFT_CS" "TFT_DC" "Net-(J3-Pad3)" "TFT_LEDK"
+    "Net-(LS1-Pad1)" "Net-(Q1-Pad1)" "TFT_LED" BUZZER "SW_L" "SW_R" GND +3V3
+    "Net-(C7-Pad1)" "Net-(C8-Pad1)" "Net-(C9-Pad1)" +3V0 "Net-(C12-Pad1)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "UART1_TX"
+    "UART1_RX" GPIO "RTC_SCL" "RTC_SDA"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

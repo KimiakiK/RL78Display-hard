@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "RL78Display"
-Date "2021-05-07"
-Rev "V1.1"
+Date "2021-06-20"
+Rev "V2.0"
 Comp "https://github.com/KimiakiK"
 Comment1 ""
 Comment2 ""
@@ -17,9 +17,9 @@ $Comp
 L Connector:USB_B_Mini J1
 U 1 1 6071A79F
 P 1500 1450
-F 0 "J1" H 1557 1917 50  0000 C CNN
-F 1 "USB_B_Mini" H 1557 1826 50  0000 C CNN
-F 2 "RL78Display:Mini_Micro_USB_Connector" H 1650 1400 50  0001 C CNN
+F 0 "J1" H 1500 1900 50  0000 C CNN
+F 1 "USB_B_Mini" H 1500 1800 50  0000 C CNN
+F 2 "RL78Display:UX60SC-MB-5ST" H 1650 1400 50  0001 C CNN
 F 3 "~" H 1650 1400 50  0001 C CNN
 	1    1500 1450
 	1    0    0    -1  
@@ -27,12 +27,12 @@ $EndComp
 $Comp
 L RL78Display:breadboardController J2
 U 1 1 6071DBAC
-P 1500 4500
-F 0 "J2" H 1442 5075 50  0000 C CNN
-F 1 "breadboardController" H 1442 4984 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 1450 5000 50  0001 C CNN
-F 3 "" H 1450 5000 50  0001 C CNN
-	1    1500 4500
+P 1450 5650
+F 0 "J2" H 1450 6200 50  0000 C CNN
+F 1 "breadboardController" H 1450 6100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 1400 6150 50  0001 C CNN
+F 3 "" H 1400 6150 50  0001 C CNN
+	1    1450 5650
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -44,28 +44,6 @@ F 1 "Speaker" H 9670 5355 50  0000 L CNN
 F 2 "RL78Display:PKMCS0909E4000" H 9500 5250 50  0001 C CNN
 F 3 "~" H 9490 5400 50  0001 C CNN
 	1    9500 5450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW1
-U 1 1 60720946
-P 1500 3000
-F 0 "SW1" H 1500 3193 50  0000 C CNN
-F 1 "SW_Push" H 1500 3194 50  0001 C CNN
-F 2 "RL78Display:SW_THBP07-043C" H 1500 3200 50  0001 C CNN
-F 3 "~" H 1500 3200 50  0001 C CNN
-	1    1500 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Switch:SW_Push SW2
-U 1 1 607216D4
-P 1500 3300
-F 0 "SW2" H 1500 3493 50  0000 C CNN
-F 1 "SW_Push" H 1500 3494 50  0001 C CNN
-F 2 "RL78Display:SW_THBP07-043C" H 1500 3500 50  0001 C CNN
-F 3 "~" H 1500 3500 50  0001 C CNN
-	1    1500 3300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -310,70 +288,49 @@ $EndComp
 Connection ~ 5500 6500
 Wire Wire Line
 	5500 6500 5650 6500
-$Comp
-L power:GND #PWR01
-U 1 1 6073E1DB
-P 1300 3300
-F 0 "#PWR01" H 1300 3050 50  0001 C CNN
-F 1 "GND" H 1300 3150 50  0000 C CNN
-F 2 "" H 1300 3300 50  0001 C CNN
-F 3 "" H 1300 3300 50  0001 C CNN
-	1    1300 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1300 3000 1300 3300
-Connection ~ 1300 3300
-Text GLabel 1700 3000 2    50   Input ~ 0
+Text GLabel 900  3600 0    50   Input ~ 0
 SW_L
-Text GLabel 1700 3300 2    50   Input ~ 0
+Text GLabel 900  4300 0    50   Input ~ 0
 SW_R
-Text GLabel 1750 4150 2    50   Input ~ 0
+Text GLabel 1700 5300 2    50   Input ~ 0
 SW_A
-Text GLabel 1750 4250 2    50   Input ~ 0
+Text GLabel 1700 5400 2    50   Input ~ 0
 SW_B
-Text GLabel 1750 4350 2    50   Input ~ 0
+Text GLabel 1700 5500 2    50   Input ~ 0
 SW_C
-Text GLabel 1750 4450 2    50   Input ~ 0
+Text GLabel 1700 5600 2    50   Input ~ 0
 SW_D
-Text GLabel 1750 4550 2    50   Input ~ 0
+Text GLabel 1700 5700 2    50   Input ~ 0
 POS_H
-Text GLabel 1750 4650 2    50   Input ~ 0
+Text GLabel 1700 5800 2    50   Input ~ 0
 POS_V
 $Comp
 L Device:C_Small C5
 U 1 1 60740B98
-P 1950 4850
-F 0 "C5" V 2000 4700 50  0000 L CNN
-F 1 "0.1uF" V 1900 4700 50  0000 C CNN
-F 2 "RL78Display:1608Metric" H 1950 4850 50  0001 C CNN
-F 3 "~" H 1950 4850 50  0001 C CNN
-	1    1950 4850
-	0    -1   -1   0   
+P 7050 1250
+F 0 "C5" H 6950 1200 50  0000 R CNN
+F 1 "1uF" H 6950 1300 50  0000 R CNN
+F 2 "RL78Display:1608Metric" H 7050 1250 50  0001 C CNN
+F 3 "~" H 7050 1250 50  0001 C CNN
+	1    7050 1250
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR09
 U 1 1 6074252E
-P 1750 4850
-F 0 "#PWR09" H 1750 4600 50  0001 C CNN
-F 1 "GND" H 1750 4700 50  0000 C CNN
-F 2 "" H 1750 4850 50  0001 C CNN
-F 3 "" H 1750 4850 50  0001 C CNN
-	1    1750 4850
+P 1700 6000
+F 0 "#PWR09" H 1700 5750 50  0001 C CNN
+F 1 "GND" H 1700 5850 50  0000 C CNN
+F 2 "" H 1700 6000 50  0001 C CNN
+F 3 "" H 1700 6000 50  0001 C CNN
+	1    1700 6000
 	1    0    0    -1  
 $EndComp
-Connection ~ 1750 4850
 Wire Wire Line
-	1750 4850 1850 4850
-Wire Wire Line
-	2050 4850 2150 4850
-Wire Wire Line
-	2150 4850 2150 4750
-Wire Wire Line
-	2150 4750 1750 4750
-Text GLabel 1800 1450 2    50   Input ~ 0
+	2100 5900 1700 5900
+Text GLabel 2000 1450 2    50   Input ~ 0
 TOOL0
-Text GLabel 1800 1550 2    50   Input ~ 0
+Text GLabel 2000 1550 2    50   Input ~ 0
 NRST
 Text GLabel 4150 2700 0    50   Input ~ 0
 TOOL0
@@ -393,8 +350,6 @@ $EndComp
 Wire Wire Line
 	3650 2800 3750 2800
 Connection ~ 3750 2800
-Wire Wire Line
-	3750 2800 4150 2800
 Text GLabel 4150 3000 0    50   Input ~ 0
 XT1
 Text GLabel 4150 2900 0    50   Input ~ 0
@@ -447,17 +402,17 @@ Text GLabel 6850 3100 2    50   Input ~ 0
 POS_H
 Text GLabel 6850 3200 2    50   Input ~ 0
 POS_V
-Text GLabel 6850 2500 2    50   Input ~ 0
+Text GLabel 6850 5400 2    50   Input ~ 0
 SW_A
-Text GLabel 6850 2600 2    50   Input ~ 0
+Text GLabel 6850 5300 2    50   Input ~ 0
 SW_B
-Text GLabel 6850 2700 2    50   Input ~ 0
+Text GLabel 6850 5200 2    50   Input ~ 0
 SW_C
-Text GLabel 6850 2800 2    50   Input ~ 0
+Text GLabel 6850 5100 2    50   Input ~ 0
 SW_D
-Text GLabel 4150 5500 0    50   Input ~ 0
+Text GLabel 6850 5600 2    50   Input ~ 0
 SW_L
-Text GLabel 4150 5400 0    50   Input ~ 0
+Text GLabel 6850 5500 2    50   Input ~ 0
 SW_R
 Text GLabel 8350 2950 0    50   Input ~ 0
 TFT_DC
@@ -613,31 +568,31 @@ BUZZER
 $Comp
 L Device:LED_Small D1
 U 1 1 60796A41
-P 9500 1500
-F 0 "D1" H 9500 1750 50  0000 C CNN
-F 1 "Status" H 9500 1650 50  0000 C CNN
-F 2 "RL78Display:1608Metric" V 9500 1500 50  0001 C CNN
-F 3 "~" V 9500 1500 50  0001 C CNN
-	1    9500 1500
+P 9500 1250
+F 0 "D1" H 9500 1500 50  0000 C CNN
+F 1 "Status" H 9500 1400 50  0000 C CNN
+F 2 "RL78Display:1608Metric" V 9500 1250 50  0001 C CNN
+F 3 "~" V 9500 1250 50  0001 C CNN
+	1    9500 1250
 	1    0    0    -1  
 $EndComp
-Text GLabel 9100 1500 0    50   Input ~ 0
+Text GLabel 9100 1250 0    50   Input ~ 0
 LED_Status
 $Comp
 L Device:R_Small R2
 U 1 1 60798E6A
-P 9700 1500
-F 0 "R2" V 9600 1500 50  0000 C CNN
-F 1 "R" V 9700 1500 40  0001 C CNN
-F 2 "RL78Display:1608Metric" H 9700 1500 50  0001 C CNN
-F 3 "~" H 9700 1500 50  0001 C CNN
-	1    9700 1500
+P 9700 1250
+F 0 "R2" V 9600 1250 50  0000 C CNN
+F 1 "R" V 9700 1250 40  0001 C CNN
+F 2 "RL78Display:1608Metric" H 9700 1250 50  0001 C CNN
+F 3 "~" H 9700 1250 50  0001 C CNN
+	1    9700 1250
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9900 1400 9900 1500
+	9900 1150 9900 1250
 Wire Wire Line
-	9900 1500 9800 1500
+	9900 1250 9800 1250
 Text GLabel 4150 4500 0    50   Input ~ 0
 LED_Status
 NoConn ~ 4150 2300
@@ -647,8 +602,6 @@ NoConn ~ 4150 2600
 NoConn ~ 4150 3100
 NoConn ~ 4150 3200
 NoConn ~ 4150 3300
-NoConn ~ 4150 4100
-NoConn ~ 4150 4200
 NoConn ~ 4150 4300
 NoConn ~ 4150 4400
 NoConn ~ 4150 4600
@@ -659,7 +612,6 @@ NoConn ~ 4150 5000
 NoConn ~ 4150 5100
 NoConn ~ 4150 5200
 NoConn ~ 4150 5300
-NoConn ~ 4150 5600
 NoConn ~ 6850 2400
 NoConn ~ 6850 2900
 NoConn ~ 6850 3000
@@ -673,12 +625,6 @@ NoConn ~ 6850 4100
 NoConn ~ 6850 4200
 NoConn ~ 6850 4400
 NoConn ~ 6850 5000
-NoConn ~ 6850 5100
-NoConn ~ 6850 5200
-NoConn ~ 6850 5300
-NoConn ~ 6850 5400
-NoConn ~ 6850 5500
-NoConn ~ 6850 5600
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 607C0F36
@@ -724,28 +670,12 @@ Connection ~ 1400 1850
 $Comp
 L Connector:TestPoint TP3
 U 1 1 607C77A1
-P 9250 1500
-F 0 "TP3" H 9250 1700 50  0000 C CNN
-F 1 "TestPoint" H 9308 1527 50  0001 L CNN
-F 2 "RL78Display:TestPoint_THTPad_D1.4mm_Drill0.8mm" H 9450 1500 50  0001 C CNN
-F 3 "~" H 9450 1500 50  0001 C CNN
-	1    9250 1500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9100 1500 9250 1500
-Connection ~ 9250 1500
-Wire Wire Line
-	9250 1500 9400 1500
-$Comp
-L RL78Display:RL78G13_64pin U2
-U 1 1 608170EA
-P 5500 3950
-F 0 "U2" H 5500 5865 50  0000 C CNN
-F 1 "RL78G13_64pin" H 5500 5774 50  0000 C CNN
-F 2 "RL78Display:LQFP-64-12x12nn-P0.65mm_FusionPCB" H 5500 3950 50  0001 C CNN
-F 3 "" H 5500 3950 50  0001 C CNN
-	1    5500 3950
+P 9250 1650
+F 0 "TP3" H 9250 1850 50  0000 C CNN
+F 1 "TestPoint" H 9308 1677 50  0001 L CNN
+F 2 "RL78Display:TestPoint_THTPad_D1.4mm_Drill0.8mm" H 9450 1650 50  0001 C CNN
+F 3 "~" H 9450 1650 50  0001 C CNN
+	1    9250 1650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -753,18 +683,10 @@ Wire Wire Line
 Wire Wire Line
 	4150 3600 4150 3500
 Wire Wire Line
-	4150 3700 3650 3700
-Connection ~ 4150 3700
-Wire Wire Line
-	4150 3600 3900 3600
-Wire Wire Line
 	3900 3600 3900 3900
 Wire Wire Line
 	3900 3900 3650 3900
-Connection ~ 4150 3600
 Connection ~ 3650 3900
-Wire Wire Line
-	4150 3400 3200 3400
 $Comp
 L power:+5V #PWR0101
 U 1 1 6094E039
@@ -791,24 +713,23 @@ Connection ~ 3650 3700
 $Comp
 L power:+5V #PWR0103
 U 1 1 609542BE
-P 2150 4750
-F 0 "#PWR0103" H 2150 4600 50  0001 C CNN
-F 1 "+5V" H 2150 4900 50  0000 C CNN
-F 2 "" H 2150 4750 50  0001 C CNN
-F 3 "" H 2150 4750 50  0001 C CNN
-	1    2150 4750
+P 2100 5900
+F 0 "#PWR0103" H 2100 5750 50  0001 C CNN
+F 1 "+5V" H 2100 6050 50  0000 C CNN
+F 2 "" H 2100 5900 50  0001 C CNN
+F 3 "" H 2100 5900 50  0001 C CNN
+	1    2100 5900
 	1    0    0    -1  
 $EndComp
-Connection ~ 2150 4750
 $Comp
 L power:+5V #PWR0104
 U 1 1 60956797
-P 9900 1400
-F 0 "#PWR0104" H 9900 1250 50  0001 C CNN
-F 1 "+5V" H 9900 1550 50  0000 C CNN
-F 2 "" H 9900 1400 50  0001 C CNN
-F 3 "" H 9900 1400 50  0001 C CNN
-	1    9900 1400
+P 9900 1150
+F 0 "#PWR0104" H 9900 1000 50  0001 C CNN
+F 1 "+5V" H 9900 1300 50  0000 C CNN
+F 2 "" H 9900 1150 50  0001 C CNN
+F 3 "" H 9900 1150 50  0001 C CNN
+	1    9900 1150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -934,4 +855,466 @@ Wire Wire Line
 	8550 2550 8550 2700
 Wire Wire Line
 	8450 2550 8450 2700
+NoConn ~ 4150 5400
+NoConn ~ 4150 5500
+Text GLabel 6850 2700 2    50   Input ~ 0
+UART1_TX
+Text GLabel 6850 2800 2    50   Input ~ 0
+UART1_RX
+Text GLabel 4150 4100 0    50   Input ~ 0
+RTC_SCL
+Text GLabel 4150 4200 0    50   Input ~ 0
+RTC_SDA
+Connection ~ 4150 3600
+Connection ~ 4150 3700
+Wire Wire Line
+	4150 3700 3650 3700
+Wire Wire Line
+	4150 3600 3900 3600
+Wire Wire Line
+	4150 3400 3200 3400
+Wire Wire Line
+	3750 2800 4150 2800
+$Comp
+L RL78Display:RL78G13_64pin U2
+U 1 1 608170EA
+P 5500 3950
+F 0 "U2" H 5500 5865 50  0000 C CNN
+F 1 "RL78G13_64pin" H 5500 5774 50  0000 C CNN
+F 2 "RL78Display:LQFP-64-12x12nn-P0.65mm_FusionPCB" H 5500 3950 50  0001 C CNN
+F 3 "" H 5500 3950 50  0001 C CNN
+	1    5500 3950
+	1    0    0    -1  
+$EndComp
+Text GLabel 4150 5600 0    50   Input ~ 0
+GPIO
+NoConn ~ 6850 2500
+NoConn ~ 6850 2600
+Text GLabel 9100 1650 0    50   Input ~ 0
+GPIO
+Wire Wire Line
+	9100 1650 9250 1650
+$Comp
+L RL78Display:RX8900CE U5
+U 1 1 60D0E9B2
+P 2100 6850
+F 0 "U5" H 2100 7275 50  0000 C CNN
+F 1 "RX8900CE" H 2100 7184 50  0000 C CNN
+F 2 "RL78Display:RX8900CE" H 2100 6850 50  0001 C CNN
+F 3 "" H 2100 6850 50  0001 C CNN
+	1    2100 6850
+	1    0    0    -1  
+$EndComp
+Text GLabel 1750 7050 0    50   Input ~ 0
+RTC_SCL
+Text GLabel 2650 6950 2    50   Input ~ 0
+RTC_SDA
+$Comp
+L power:+3V0 #PWR0106
+U 1 1 60D122E5
+P 1650 6550
+F 0 "#PWR0106" H 1650 6400 50  0001 C CNN
+F 1 "+3V0" H 1650 6700 50  0000 C CNN
+F 2 "" H 1650 6550 50  0001 C CNN
+F 3 "" H 1650 6550 50  0001 C CNN
+	1    1650 6550
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2450 6650
+$Comp
+L power:GND #PWR0107
+U 1 1 60D1545F
+P 1300 7250
+F 0 "#PWR0107" H 1300 7000 50  0001 C CNN
+F 1 "GND" H 1300 7100 50  0000 C CNN
+F 2 "" H 1300 7250 50  0001 C CNN
+F 3 "" H 1300 7250 50  0001 C CNN
+	1    1300 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 60D1648D
+P 2550 7150
+F 0 "#PWR0108" H 2550 6900 50  0001 C CNN
+F 1 "GND" H 2550 7000 50  0000 C CNN
+F 2 "" H 2550 7150 50  0001 C CNN
+F 3 "" H 2550 7150 50  0001 C CNN
+	1    2550 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 6750 2550 6750
+Wire Wire Line
+	2550 6750 2550 7150
+Wire Wire Line
+	2450 6950 2650 6950
+$Comp
+L Device:C_Small C9
+U 1 1 60D2D508
+P 1200 6950
+F 0 "C9" V 1250 6800 50  0000 L CNN
+F 1 "0.1uF" V 1150 6800 50  0000 C CNN
+F 2 "RL78Display:1608Metric" H 1200 6950 50  0001 C CNN
+F 3 "~" H 1200 6950 50  0001 C CNN
+	1    1200 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 60D46CBD
+P 1100 6850
+F 0 "R12" V 1000 6850 50  0000 C CNN
+F 1 "1k" V 1100 6850 40  0000 C CNN
+F 2 "RL78Display:1608Metric" H 1100 6850 50  0001 C CNN
+F 3 "~" H 1100 6850 50  0001 C CNN
+	1    1100 6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1750 6750 1650 6750
+Wire Wire Line
+	1650 6750 1650 6550
+Wire Wire Line
+	1750 6650 1300 6650
+Wire Wire Line
+	1750 6850 1200 6850
+Connection ~ 1200 6850
+Wire Wire Line
+	1200 7050 1200 7250
+Wire Wire Line
+	1200 7250 1300 7250
+Connection ~ 1300 7250
+Wire Wire Line
+	1000 7050 1000 7250
+Wire Wire Line
+	1000 7250 1200 7250
+Connection ~ 1200 7250
+$Comp
+L Device:C_Small C10
+U 1 1 60D58FD4
+P 1400 6750
+F 0 "C10" V 1450 6600 50  0000 L CNN
+F 1 "0.1uF" V 1350 6600 50  0000 C CNN
+F 2 "RL78Display:1608Metric" H 1400 6750 50  0001 C CNN
+F 3 "~" H 1400 6750 50  0001 C CNN
+	1    1400 6750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1300 6650 1300 6750
+Connection ~ 1300 6750
+Wire Wire Line
+	1300 6750 1300 6950
+Wire Wire Line
+	1650 6750 1500 6750
+Connection ~ 1650 6750
+Wire Wire Line
+	1750 6950 1300 6950
+Connection ~ 1300 6950
+Wire Wire Line
+	1300 6950 1300 7250
+$Comp
+L Connector:USB_B_Micro J4
+U 1 1 60D808B7
+P 1500 2650
+F 0 "J4" H 1500 3100 50  0000 C CNN
+F 1 "USB_B_Micro" H 1500 3000 50  0000 C CNN
+F 2 "RL78Display:ZX62-B-5PA" H 1650 2600 50  0001 C CNN
+F 3 "~" H 1650 2600 50  0001 C CNN
+	1    1500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 60D81CF1
+P 1500 3050
+F 0 "#PWR0109" H 1500 2800 50  0001 C CNN
+F 1 "GND" H 1500 2900 50  0000 C CNN
+F 2 "" H 1500 3050 50  0001 C CNN
+F 3 "" H 1500 3050 50  0001 C CNN
+	1    1500 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 3050 1500 3050
+Connection ~ 1500 3050
+NoConn ~ 1800 2850
+Text GLabel 2000 2750 2    50   Input ~ 0
+UART1_RX
+Text GLabel 2000 2650 2    50   Input ~ 0
+UART1_TX
+Wire Wire Line
+	2000 2650 1800 2650
+Wire Wire Line
+	1800 2750 2000 2750
+Wire Wire Line
+	1800 2450 1900 2450
+Wire Wire Line
+	1900 2450 1900 1250
+Connection ~ 1900 1250
+Wire Wire Line
+	1800 1450 2000 1450
+Wire Wire Line
+	2000 1550 1800 1550
+$Comp
+L RL78Display:NJM2864 U6
+U 1 1 60DA2871
+P 6300 1250
+F 0 "U6" H 6300 1600 50  0000 C CNN
+F 1 "NJM2864" H 6300 1500 50  0000 C CNN
+F 2 "RL78Display:SOT-23-5" H 6300 1250 50  0001 C CNN
+F 3 "" H 6300 1250 50  0001 C CNN
+	1    6300 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR013
+U 1 1 60DA3026
+P 5700 1000
+F 0 "#PWR013" H 5700 850 50  0001 C CNN
+F 1 "+5V" H 5700 1150 50  0000 C CNN
+F 2 "" H 5700 1000 50  0001 C CNN
+F 3 "" H 5700 1000 50  0001 C CNN
+	1    5700 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 60DA4806
+P 5700 1450
+F 0 "C11" H 5800 1500 50  0000 L CNN
+F 1 "0.1uF" H 5800 1400 50  0000 L CNN
+F 2 "RL78Display:1608Metric" H 5700 1450 50  0001 C CNN
+F 3 "~" H 5700 1450 50  0001 C CNN
+	1    5700 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C12
+U 1 1 60DA5915
+P 6900 1400
+F 0 "C12" H 6700 1450 50  0000 L CNN
+F 1 "0.1uF" H 6600 1350 50  0000 L CNN
+F 2 "RL78Display:1608Metric" H 6900 1400 50  0001 C CNN
+F 3 "~" H 6900 1400 50  0001 C CNN
+	1    6900 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 1000 5700 1150
+Wire Wire Line
+	5700 1150 5900 1150
+Connection ~ 5700 1150
+Wire Wire Line
+	5700 1150 5700 1300
+Wire Wire Line
+	5900 1300 5700 1300
+Connection ~ 5700 1300
+Wire Wire Line
+	5700 1300 5700 1350
+Wire Wire Line
+	5700 1550 6300 1550
+Wire Wire Line
+	6300 1550 6300 1500
+$Comp
+L power:+3V0 #PWR016
+U 1 1 60DBA8D6
+P 7050 1000
+F 0 "#PWR016" H 7050 850 50  0001 C CNN
+F 1 "+3V0" H 7050 1150 50  0000 C CNN
+F 2 "" H 7050 1000 50  0001 C CNN
+F 3 "" H 7050 1000 50  0001 C CNN
+	1    7050 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 1000 7050 1150
+Wire Wire Line
+	7050 1150 6700 1150
+Wire Wire Line
+	7050 1350 7050 1550
+Wire Wire Line
+	7050 1550 6900 1550
+Connection ~ 6300 1550
+Wire Wire Line
+	6900 1500 6900 1550
+Connection ~ 6900 1550
+Wire Wire Line
+	6900 1550 6300 1550
+Wire Wire Line
+	6900 1300 6700 1300
+$Comp
+L power:GND #PWR014
+U 1 1 60DCE9B3
+P 6300 1550
+F 0 "#PWR014" H 6300 1300 50  0001 C CNN
+F 1 "GND" H 6300 1400 50  0000 C CNN
+F 2 "" H 6300 1550 50  0001 C CNN
+F 3 "" H 6300 1550 50  0001 C CNN
+	1    6300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L RL78Display:TTP223 U3
+U 1 1 60DDA3BB
+P 1700 3700
+F 0 "U3" H 1700 4000 50  0000 C CNN
+F 1 "TTP223" H 1700 3900 50  0000 C CNN
+F 2 "RL78Display:SOT-23-6" H 1700 3700 50  0001 C CNN
+F 3 "" H 1700 3700 50  0001 C CNN
+	1    1700 3700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2050 3800
+NoConn ~ 2050 3600
+NoConn ~ 1350 3800
+$Comp
+L power:GND #PWR01
+U 1 1 60DEA74F
+P 1250 4000
+F 0 "#PWR01" H 1250 3750 50  0001 C CNN
+F 1 "GND" H 1250 3850 50  0000 C CNN
+F 2 "" H 1250 4000 50  0001 C CNN
+F 3 "" H 1250 4000 50  0001 C CNN
+	1    1250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 3700 2150 3700
+Wire Wire Line
+	2150 3700 2150 3550
+Wire Wire Line
+	1350 3700 1250 3700
+$Comp
+L RL78Display:TTP223 U4
+U 1 1 60DF9A1A
+P 1700 4400
+F 0 "U4" H 1700 4700 50  0000 C CNN
+F 1 "TTP223" H 1700 4600 50  0000 C CNN
+F 2 "RL78Display:SOT-23-6" H 1700 4400 50  0001 C CNN
+F 3 "" H 1700 4400 50  0001 C CNN
+	1    1700 4400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2050 4500
+NoConn ~ 2050 4300
+NoConn ~ 1350 4500
+$Comp
+L power:GND #PWR07
+U 1 1 60DF9A27
+P 1250 4700
+F 0 "#PWR07" H 1250 4450 50  0001 C CNN
+F 1 "GND" H 1250 4550 50  0000 C CNN
+F 2 "" H 1250 4700 50  0001 C CNN
+F 3 "" H 1250 4700 50  0001 C CNN
+	1    1250 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 4400 2150 4400
+Wire Wire Line
+	2150 4400 2150 4250
+Wire Wire Line
+	1350 4400 1250 4400
+$Comp
+L Device:CP_Small C8
+U 1 1 60E1BDBD
+P 1000 6950
+F 0 "C8" V 1050 6800 50  0000 L CNN
+F 1 "0.22F" V 950 6700 50  0000 L CNN
+F 2 "RL78Display:DCK-3R3E224-E" H 1000 6950 50  0001 C CNN
+F 3 "~" H 1000 6950 50  0001 C CNN
+	1    1000 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Small D2
+U 1 1 60E3C17D
+P 1050 3900
+F 0 "D2" H 1050 4000 50  0000 C CNN
+F 1 "SW_L" H 1050 3800 50  0000 C CNN
+F 2 "RL78Display:1608Metric" V 1050 3900 50  0001 C CNN
+F 3 "~" V 1050 3900 50  0001 C CNN
+	1    1050 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R13
+U 1 1 60E3DB68
+P 1050 3700
+F 0 "R13" V 1150 3700 50  0000 C CNN
+F 1 "R" V 1050 3700 40  0001 C CNN
+F 2 "RL78Display:1608Metric" H 1050 3700 50  0001 C CNN
+F 3 "~" H 1050 3700 50  0001 C CNN
+	1    1050 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1350 3600 1050 3600
+Connection ~ 1050 3600
+Wire Wire Line
+	1050 3600 900  3600
+Wire Wire Line
+	1050 4000 1250 4000
+Wire Wire Line
+	1250 3700 1250 4000
+Connection ~ 1250 4000
+$Comp
+L Device:LED_Small D3
+U 1 1 60E579AA
+P 1050 4600
+F 0 "D3" H 1050 4700 50  0000 C CNN
+F 1 "SW_R" H 1050 4500 50  0000 C CNN
+F 2 "RL78Display:1608Metric" V 1050 4600 50  0001 C CNN
+F 3 "~" V 1050 4600 50  0001 C CNN
+	1    1050 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R14
+U 1 1 60E579B4
+P 1050 4400
+F 0 "R14" V 1150 4400 50  0000 C CNN
+F 1 "R" V 1050 4400 40  0001 C CNN
+F 2 "RL78Display:1608Metric" H 1050 4400 50  0001 C CNN
+F 3 "~" H 1050 4400 50  0001 C CNN
+	1    1050 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1350 4300 1050 4300
+Connection ~ 1050 4300
+Wire Wire Line
+	1050 4300 900  4300
+Wire Wire Line
+	1050 4700 1250 4700
+Wire Wire Line
+	1250 4400 1250 4700
+Connection ~ 1250 4700
+$Comp
+L power:+5V #PWR0110
+U 1 1 60E8F774
+P 2150 3550
+F 0 "#PWR0110" H 2150 3400 50  0001 C CNN
+F 1 "+5V" H 2150 3700 50  0000 C CNN
+F 2 "" H 2150 3550 50  0001 C CNN
+F 3 "" H 2150 3550 50  0001 C CNN
+	1    2150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0111
+U 1 1 60E90312
+P 2150 4250
+F 0 "#PWR0111" H 2150 4100 50  0001 C CNN
+F 1 "+5V" H 2150 4400 50  0000 C CNN
+F 2 "" H 2150 4250 50  0001 C CNN
+F 3 "" H 2150 4250 50  0001 C CNN
+	1    2150 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 1250 9400 1250
+Connection ~ 7050 1150
 $EndSCHEMATC
