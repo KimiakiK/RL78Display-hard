@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "RL78Display"
-Date "2021-06-20"
-Rev "V2.0"
+Date "2021-07-10"
+Rev "V2.1"
 Comp "https://github.com/KimiakiK"
 Comment1 ""
 Comment2 ""
@@ -355,25 +355,14 @@ XT1
 Text GLabel 4150 2900 0    50   Input ~ 0
 XT2
 $Comp
-L Device:C_Small C6
-U 1 1 60749CCD
-P 3650 3800
-F 0 "C6" H 3550 3850 50  0000 R CNN
-F 1 "0.1uF" H 3550 3750 50  0000 R CNN
-F 2 "RL78Display:1608Metric" H 3650 3800 50  0001 C CNN
-F 3 "~" H 3650 3800 50  0001 C CNN
-	1    3650 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR011
 U 1 1 6074BB14
-P 3650 3900
-F 0 "#PWR011" H 3650 3650 50  0001 C CNN
-F 1 "GND" H 3650 3750 50  0000 C CNN
-F 2 "" H 3650 3900 50  0001 C CNN
-F 3 "" H 3650 3900 50  0001 C CNN
-	1    3650 3900
+P 4050 3800
+F 0 "#PWR011" H 4050 3550 50  0001 C CNN
+F 1 "GND" H 4050 3650 50  0000 C CNN
+F 2 "" H 4050 3800 50  0001 C CNN
+F 3 "" H 4050 3800 50  0001 C CNN
+	1    4050 3800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -682,11 +671,6 @@ Wire Wire Line
 	4150 3800 4150 3700
 Wire Wire Line
 	4150 3600 4150 3500
-Wire Wire Line
-	3900 3600 3900 3900
-Wire Wire Line
-	3900 3900 3650 3900
-Connection ~ 3650 3900
 $Comp
 L power:+5V #PWR0101
 U 1 1 6094E039
@@ -701,15 +685,14 @@ $EndComp
 $Comp
 L power:+5V #PWR0102
 U 1 1 609507B9
-P 3650 3700
-F 0 "#PWR0102" H 3650 3550 50  0001 C CNN
-F 1 "+5V" H 3650 3850 50  0000 C CNN
-F 2 "" H 3650 3700 50  0001 C CNN
-F 3 "" H 3650 3700 50  0001 C CNN
-	1    3650 3700
+P 3700 3700
+F 0 "#PWR0102" H 3700 3550 50  0001 C CNN
+F 1 "+5V" H 3700 3850 50  0000 C CNN
+F 2 "" H 3700 3700 50  0001 C CNN
+F 3 "" H 3700 3700 50  0001 C CNN
+	1    3700 3700
 	1    0    0    -1  
 $EndComp
-Connection ~ 3650 3700
 $Comp
 L power:+5V #PWR0103
 U 1 1 609542BE
@@ -861,16 +844,13 @@ Text GLabel 6850 2700 2    50   Input ~ 0
 UART1_TX
 Text GLabel 6850 2800 2    50   Input ~ 0
 UART1_RX
-Text GLabel 4150 4100 0    50   Input ~ 0
+Text GLabel 3650 4100 0    50   Input ~ 0
 RTC_SCL
-Text GLabel 4150 4200 0    50   Input ~ 0
+Text GLabel 3650 4200 0    50   Input ~ 0
 RTC_SDA
-Connection ~ 4150 3600
 Connection ~ 4150 3700
 Wire Wire Line
-	4150 3700 3650 3700
-Wire Wire Line
-	4150 3600 3900 3600
+	4150 3700 3850 3700
 Wire Wire Line
 	4150 3400 3200 3400
 Wire Wire Line
@@ -990,25 +970,6 @@ Wire Wire Line
 Wire Wire Line
 	1000 7250 1200 7250
 Connection ~ 1200 7250
-$Comp
-L Device:C_Small C10
-U 1 1 60D58FD4
-P 1400 6750
-F 0 "C10" V 1450 6600 50  0000 L CNN
-F 1 "0.1uF" V 1350 6600 50  0000 C CNN
-F 2 "RL78Display:1608Metric" H 1400 6750 50  0001 C CNN
-F 3 "~" H 1400 6750 50  0001 C CNN
-	1    1400 6750
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1300 6650 1300 6750
-Connection ~ 1300 6750
-Wire Wire Line
-	1300 6750 1300 6950
-Wire Wire Line
-	1650 6750 1500 6750
-Connection ~ 1650 6750
 Wire Wire Line
 	1750 6950 1300 6950
 Connection ~ 1300 6950
@@ -1317,4 +1278,57 @@ $EndComp
 Wire Wire Line
 	9100 1250 9400 1250
 Connection ~ 7050 1150
+Wire Wire Line
+	3650 4100 3700 4100
+Wire Wire Line
+	4150 4200 3850 4200
+Wire Wire Line
+	4150 3600 4050 3600
+Wire Wire Line
+	4050 3600 4050 3800
+Connection ~ 4150 3600
+$Comp
+L Device:R_Small R15
+U 1 1 611F3124
+P 3700 3900
+F 0 "R15" V 3750 3900 50  0000 C TNN
+F 1 "2k" V 3700 3900 40  0000 C CNN
+F 2 "RL78Display:1608Metric" H 3700 3900 50  0001 C CNN
+F 3 "~" H 3700 3900 50  0001 C CNN
+	1    3700 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R16
+U 1 1 611F5E02
+P 3850 3900
+F 0 "R16" V 3900 3900 50  0000 C TNN
+F 1 "2k" V 3850 3900 40  0000 C CNN
+F 2 "RL78Display:1608Metric" H 3850 3900 50  0001 C CNN
+F 3 "~" H 3850 3900 50  0001 C CNN
+	1    3850 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3700 3700
+Wire Wire Line
+	3700 3700 3650 3700
+Wire Wire Line
+	3700 4000 3700 4100
+Connection ~ 3700 4100
+Wire Wire Line
+	3700 4100 4150 4100
+Wire Wire Line
+	3700 3800 3700 3700
+Wire Wire Line
+	3850 3700 3850 3800
+Connection ~ 3850 3700
+Wire Wire Line
+	3850 3700 3700 3700
+Wire Wire Line
+	3850 4000 3850 4200
+Connection ~ 3850 4200
+Wire Wire Line
+	3850 4200 3650 4200
+Wire Wire Line
+	1300 6650 1300 6950
 $EndSCHEMATC
