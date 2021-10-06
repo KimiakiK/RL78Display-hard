@@ -1,1 +1,25 @@
 # RL78Display-hard
+
+## パーツリスト
+- [RL78/G13 R5F100LLAFA 512KB/32KB](https://www.marutsu.co.jp/pc/i/226841/)
+- [TFT 1.3inch 240x240](https://akizukidenshi.com/catalog/g/gP-15695/)
+- [RTC IC RX8900CE](https://akizukidenshi.com/catalog/g/gI-13320/)
+- タッチセンサIC TTP223
+- [コネクタ FFC Bottom 12極 0.5mm](https://www.marutsu.co.jp/pc/i/15778034/)
+- [表面実装圧電ブザー](https://akizukidenshi.com/catalog/g/gP-14238/)
+- [水晶発振子 32.768kHz](https://akizukidenshi.com/catalog/g/gP-07195/)
+- [レギュレータ 3.3V 500mA SOT89-5 NJM2884U1-33](https://akizukidenshi.com/catalog/g/gI-10673/)
+- [レギュレータ 3.0V 100mA SOT-23-5 NJM2864F03](https://akizukidenshi.com/catalog/g/gI-16314/)
+- [マイクロUSBコネクタ](https://akizukidenshi.com/catalog/g/gC-11183/)
+- [ミニUSBコネクタ](https://akizukidenshi.com/catalog/g/gC-05690/)
+- [NchパワーMOSFET SOT-23](https://akizukidenshi.com/catalog/g/gI-14653/)
+- [青色チップLED 1608](https://akizukidenshi.com/catalog/g/gI-11881)
+- [白色チップLED 1608](https://akizukidenshi.com/catalog/g/gI-11882)
+- [コンデンサ 0.22F 3.3V](https://akizukidenshi.com/catalog/g/gP-00240/)
+- [チップコンデンサ 2.2uF 1608](https://akizukidenshi.com/catalog/g/gP-16077/)
+- [チップコンデンサ 1uF 1608](https://akizukidenshi.com/catalog/g/gP-14526/)
+- [チップコンデンサ 0.1uF 1608](https://akizukidenshi.com/catalog/g/gP-13374/)
+- [チップコンデンサ 330pF 1608](https://akizukidenshi.com/catalog/g/gP-05584/)
+- [チップコンデンサ 10pF 1005](https://akizukidenshi.com/catalog/g/gP-13400/)
+- [フェライトビーズBLM18PPG600SN 1608](https://akizukidenshi.com/catalog/g/gP-04442/)
+- [リセッタブルヒューズ 9V 200mA 1608](https://akizukidenshi.com/catalog/g/gP-14311/)
